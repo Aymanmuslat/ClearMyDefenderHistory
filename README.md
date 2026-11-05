@@ -51,6 +51,8 @@
 
 ## طريقة الاستخدام
 
+> للتعليمات التفصيلية مع شرح كل أمر (PowerShell وCMD)، انظر [USAGE.md](USAGE.md).
+
 1. نزّل `ClearMyDefenderHistory.cmd`.
 2. انقر عليه بزرّ الفأرة الأيمن ← **Properties** ← **Unblock** ← **OK**.
 3. نقر مزدوج ← اقبل نافذة **UAC**.
