@@ -1,6 +1,6 @@
 <# : batch launcher (auto-elevates to Administrator, then runs the PowerShell below)
 @echo off
-powershell -nop - exec bypass "if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) { Start-Process -Verb RunAs 'cmd.exe' -ArgumentList '/c \"%~dpnx0\" %*' } else { Invoke-Expression ([System.IO.File]::ReadAllText('%~f0')) }"
+powershell -nop -ExecutionPolicy Bypass "if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) { Start-Process -Verb RunAs 'cmd.exe' -ArgumentList '/c \"%~dpnx0\" %*' } else { Invoke-Expression ([System.IO.File]::ReadAllText('%~f0')) }"
 goto :eof
 #>
 
